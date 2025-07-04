@@ -1,0 +1,7 @@
+http://127.0.0.1:8010 // auth-service
+http://127.0.0.1:8011 // categoria-service
+http://127.0.0.1:8012 // departamento-service
+http://127.0.0.1:8013 // ticket-service
+http://127.0.0.1:8014 // ticket-comentario-service
+http://127.0.0.1:8015 // notifications-service
+

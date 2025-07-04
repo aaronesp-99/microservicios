@@ -1,0 +1,51 @@
+# Laravel
+**/vendor/
+**/node_modules/
+**/.env
+**/.env.*
+**/.idea
+**/.vscode
+**/storage/*.key
+**/storage/debugbar/
+**/storage/logs/*
+**/storage/framework/cache/*
+**/storage/framework/sessions/*
+**/storage/framework/views/*
+**/storage/framework/testing/*
+**/public/storage
+**/public/hot
+**/public/mix-manifest.json
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Composer
+composer.lock
+
+# NPM / Yarn
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# NGINX ejecutable descargado (opcional)
+nginx-1.*/*
+!nginx/               # si tienes tu config dentro de una carpeta nginx, no ignores eso
+
+# IDEs / herramientas
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.bak
+*.tmp
+
+# Docker (opcional)
+*.pid
+docker-compose.override.yml
+
+# Otros
+.env.backup
+*.sqlite

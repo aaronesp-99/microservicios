@@ -7,6 +7,6 @@ use App\Http\Controllers\GoogleDriveController;
 
 Route::middleware('auth:sanctum')->group(function () {
    Route::post('/upload', [GoogleDriveController::class, 'uploadFile']);
-   Route::get('/get', [GoogleDriveController::class, 'getFile']);
+   Route::get('/get/{id}', [GoogleDriveController::class, 'getFile']);
    Route::get('/download/{id}', [GoogleDriveController::class, 'downloadFile']);
 });

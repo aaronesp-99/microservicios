@@ -16,10 +16,6 @@ class CategoriaController extends Controller
 
     public function save(Request $request)
     {
-        // $request->validate([
-        //     'descripcion' => 'required',
-        //     'iddepartamento' => 'required|integer',
-        // ]);
 
         Categoria::insert([
             'descripcion' => $request->descripcion,

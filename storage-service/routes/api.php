@@ -3,5 +3,10 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\GoogleDriveController;
 
-Route::middleware('auth:sanctum')->post('/path', [AuthController::class, 'fn']);
+Route::middleware('auth:sanctum')->prefix('storage')->group(function () {
+   Route::post('/upload', [GoogleDriveController::class, 'uploadFile']);
+   Route::get('/get', [GoogleDriveController::class, 'getFile']);
+   Route::get('/download/{id}', [GoogleDriveController::class, 'downloadFile']);
+});

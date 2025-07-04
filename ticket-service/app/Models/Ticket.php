@@ -24,10 +24,10 @@ class Ticket extends Model
         return $this->belongsTo(Categoria::class, 'id_categoria', 'id_categoria');
     }
 
-    // public function comentarios()
-    // {
-    //     return $this->hasMany(TicketComentario::class, 'id_ticket', 'id_ticket');
-    // }
+    public function comentarios()
+    {
+        return $this->hasMany(TicketComentario::class, 'id_ticket', 'id_ticket');
+    }
 
     public function usuarioSolicita()
     {

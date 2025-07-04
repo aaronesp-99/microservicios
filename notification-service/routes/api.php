@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NotificationController;
 
-Route::middleware('auth:sanctum')->prefix('notificaciones')->group(function () {
+Route::middleware('auth:sanctum')->group(function () {
    Route::post('/password-reset', [NotificationController::class, 'resetPassword']);
    Route::post('/ticket-creado', [NotificationController::class, 'ticketCreado']);
    Route::post('/ticket-asignado', [NotificationController::class, 'ticketAsignado']);

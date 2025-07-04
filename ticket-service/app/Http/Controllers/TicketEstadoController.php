@@ -102,7 +102,7 @@ class TicketEstadoController extends Controller
                                 'emailTecnico'  => $ticket->usuarioAtiende->email,
                                 'nombresSolicitante' => $ticket->usuarioSolicita->name,
                                 'nombresTecnico' => $ticket->usuarioSolicita->name,
-                            ]);        
+                            ]);
         });
 
         return response()->json();

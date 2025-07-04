@@ -66,8 +66,6 @@ class TicketComentarioController extends Controller
                 if (!$response->successful()) {
                     throw new \Exception('Error al subir archivo');
                 }
-                
-                // Gdrive::put('laravel-drive/'.$uniqueId, $file);
             }
         });
 

@@ -56,12 +56,12 @@ class TicketComentarioController extends Controller
                 $path = 'laravel-drive/' . $uniqueId;
                 
                 $response = Http::attach(
-                                'file',
-                                fopen($file->getRealPath(), 'r'),
-                                $file->getClientOriginalName()
-                            )->post('http://localhost/api/storage/upload', [
-                                'path' => $path
-                            ]);
+                                    'file',
+                                    fopen($file->getRealPath(), 'r'),
+                                    $file->getClientOriginalName()
+                                )->post('http://localhost/api/storage/upload', [
+                                    'path' => $path
+                                ]);
 
                 if (!$response->successful()) {
                     throw new \Exception('Error al subir archivo');

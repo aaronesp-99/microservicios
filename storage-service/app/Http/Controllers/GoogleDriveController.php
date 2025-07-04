@@ -9,7 +9,7 @@ use Yaza\LaravelGoogleDriveStorage\Gdrive;
 class GoogleDriveController extends Controller
 {
 
-    public function uploadFile(Request $request): Response
+    public function uploadFile(Request $request)
     {
         $path = $request->input('path');
         Gdrive::put($path, $request->file('file'));

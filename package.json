@@ -8,6 +8,7 @@
     "ticket-service": "php ./ticket-service/artisan serve --port=8013",
     "ticket-comentario-service": "php ./ticket-comentario-service/artisan serve --port=8014",
     "notification-service": "php ./notification-service/artisan serve --port=8015",
-    "start:all": "npm-run-all --parallel auth-service categoria-service departamento-service ticket-service ticket-comentario-service notification-service"
+    "storage-service": "php ./storage-service/artisan serve --port=8016",
+    "start:all": "npm-run-all --parallel auth-service categoria-service departamento-service ticket-service ticket-comentario-service notification-service storage-service"
   }
 }

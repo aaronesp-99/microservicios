@@ -53,8 +53,21 @@ class TicketComentarioController extends Controller
                 $archivo->ruta = $uniqueId;
                 $archivo->extension = $extension;
                 $archivo->save();
+                $path = 'laravel-drive/' . $uniqueId;
                 
-                Gdrive::put('laravel-drive/'.$uniqueId, $file);
+                $response = Http::attach(
+                                'file',
+                                fopen($file->getRealPath(), 'r'),
+                                $file->getClientOriginalName()
+                            )->post('http://localhost/api/storage/upload', [
+                                'path' => $path
+                            ]);
+
+                if (!$response->successful()) {
+                    throw new \Exception('Error al subir archivo');
+                }
+                
+                // Gdrive::put('laravel-drive/'.$uniqueId, $file);
             }
         });
 
